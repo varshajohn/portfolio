@@ -36,6 +36,15 @@ body{
     .arrow{
         display:none;
     }
+  .arrow{
+    right:0.8rem;
+    bottom:0.8rem;
+
+    font-size:1.6rem;
+
+    color:#999;
+    opacity:0.8;
+}
 
     section{
     height:auto !important;
