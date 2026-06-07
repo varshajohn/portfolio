@@ -1,101 +1,308 @@
+html,
+body{
+    overflow-x:hidden;
+}
+/* ==========================
+   TABLET
+========================== */
 
 @media screen and (max-width: 1400px) {
+
     #profile{
-        height:83vh;
-        margin-bottom: 6rem;
+        height:auto;
+        margin-bottom:4rem;
     }
+
     .about-containers{
-        flex-wrap: wrap;
-
-    }
-}
-@media screen and (max-width: 1200px) {
-    #desktop-nav{
-        display: none;
-    }
-    #hamburger-nav{
-        display: flex;
-    }
-    #experience,.experience-details-container{
-        margin-top: 2rem;
-    }
-    #profile,.section-container{
-        display: flex;
-    }
-    .arrow{
-        display: none;
-    }
-    section,.section-container{
-        height:fit-content;
-    }
-    section{
-        margin:0 5%;
-    }
-    .section__pic-container{
-        height: 275px;
-        width: 275px;
-        margin:0 auto 2rem;
-    }
-    .about-containers{
-        margin-top:0;
-    }
-
-
-}
-
-@media screen and (max-width: 600px) {
-    #contact,footer{
-        height:40vh;
-    }
-    #profile{
-        height: 83vh;
-        margin-bottom:0;
-    }
-    article{
-        font-size: 1rem;
-    }
-    footer nav{
-        height: fit-content;
-        margin-bottom: 2rem;
-    }
-
-    .about-containers,.contact-info-container,btn-container{
         flex-wrap:wrap;
     }
-    .contact-info-container{
-        margin: 0;
-    }
-    .contact-info-container p,.nav-links li a{
-        font-size: 1rem;
+}
+
+
+/* ==========================
+   SMALL LAPTOP / TABLET
+========================== */
+
+@media screen and (max-width: 1200px) {
+
+    #desktop-nav{
+        display:none;
     }
 
-    .experience-subtitle{
-        font-size: 1.25rem;
+    #hamburger-nav{
+        display:flex;
     }
-    .logo{
-        font-size: 1.5rem;
+
+    .arrow{
+        display:none;
     }
-    .nav-links{
-        flex-direction: column;
-        gap: 0.5rem;
-        text-align: center;
+
+    section{
+    height:auto !important;
+    min-height:auto !important;
+    margin:0 1rem !important;
+}
+
+    .section-container{
+        flex-direction:column;
+        align-items:center;
+        gap:2rem;
+        height:auto;
+    }
+
+    #profile{
+        flex-direction:column;
+        text-align:center;
+        height:auto;
+        margin:0;
+        gap:2rem;
     }
 
     .section__pic-container{
-        width:auto;
-        height:46vh;
-        justify-content: center;
+        width:280px;
+        height:280px;
+        margin:0 auto;
+    }
+
+    .about-containers{
+        justify-content:center;
+        margin-top:1rem;
+    }
+
+    #experience,
+    .experience-details-container{
+        margin-top:2rem;
+    }
+}
+
+
+/* ==========================
+   MOBILE
+========================== */
+
+@media screen and (max-width: 600px) {
+
+    html,
+    body{
+        overflow-x:hidden;
+        width:100%;
+    }
+
+    section{
+        margin:0 1rem;
+        padding-top:2rem;
+        height:auto;
+    }
+
+    /* HERO */
+
+    #profile{
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        text-align:center;
+
+        height:auto;
+        margin:0;
+        gap:1.5rem;
+    }
+
+    .section__pic-container{
+        width:220px;
+        height:220px;
+        margin:0 auto;
+    }
+
+    .section__text{
+        width:100%;
+    }
+
+    .title{
+        font-size:3rem;
+        line-height:1.1;
+    }
+
+    #typed-text{
+        display:block;
+        min-height:2rem;
     }
 
     .section__text__p2{
-        font-size: 1.25rem;
+        font-size:1.1rem;
     }
-    .title{
-        font-size: 2rem;
+
+    .btn-container{
+        flex-wrap:wrap;
+        justify-content:center;
+        gap:0.75rem;
     }
+
+    .btn{
+        width:auto;
+        min-width:120px;
+        padding:0.8rem 1rem;
+    }
+
+    /* ABOUT */
+
+    .section-container{
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        gap:2rem;
+    }
+
+    .about-text{
+        text-align:left;
+        max-width:100%;
+        padding:0 1rem;
+        line-height:1.8;
+    }
+
     .text-container{
-        text-align: justify;
+        max-width:100%;
     }
-    
+
+    .about-containers{
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        gap:1rem;
+    }
+
+    #about .details-container{
+        min-width:220px;
+        max-width:220px;
+    }
+
+    /* SKILLS */
+
+   #experience .details-container{
+    width:90%;
+    min-width:unset;
+    max-width:320px;
+    margin:0 auto;
 }
 
+    .experience-sub-title{
+        font-size:1.5rem;
+    }
+
+    .article-container{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:1rem;
+}
+
+article{
+    width:120px;
+}
+
+    article h3{
+        font-size:0.95rem;
+    }
+
+    article p{
+        font-size:0.75rem;
+    }
+
+    /* PROJECTS */
+
+    .projects-container{
+        gap:1.5rem;
+    }
+
+    .color-container{
+    width:90%;
+    max-width:320px;
+    margin:0 auto 1.5rem;
+}
+    .project-img{
+        height:180px;
+    }
+
+    /* CONTACT */
+
+
+     #contact{
+    display:flex !important;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+
+    height:auto !important;
+    min-height:auto !important;
+
+    margin-top:2rem;
+    padding-bottom:2rem;
+}
+
+.contact-info-upper-container{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:0.4rem;
+    width:90%;
+    margin:2rem auto 0;
+    padding-bottom:0rem;
+}
+.contact-icon{
+    width:28px;
+    height:28px;
+}
+
+.contact-info-container{
+    width:100%;
+
+    display:flex;
+    flex-direction:row;
+    align-items:center;
+
+    gap:0.75rem;
+
+    padding:0.4rem 0.8rem;
+}
+
+    .contact-info-container p{
+    font-size:0.8rem;
+    white-space:nowrap;
+}
+.contact-subtext{
+    padding:0 1rem;
+}
+
+    footer{
+        height:auto;
+        margin-top:0rem;
+    padding-bottom:1rem;
+    }
+
+   footer .nav-links{
+    display:flex;
+    flex-wrap:nowrap;
+    justify-content:center;
+    gap:0.7rem;
+}
+footer .nav-links a{
+    font-size:1.2rem;
+}
+
+footer .nav-links li{
+    margin:0;
+}
+
+    .logo{
+        font-size:1.5rem;
+    }
+    .article-container{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:1rem;
+}
+
+article{
+    width:7rem;
+}
+}

@@ -3,13 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
+    <title>Varsha John | Software Engineer</title>
+
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="mediaqueries.css">
+
+    <!-- Devicon Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
+    <link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
     <nav id="desktop-nav">
         <div class="logo">Varsha John</div>
+
+<div class="theme-toggle" onclick="toggleTheme()">
+    <i class="fas fa-moon"></i>
+</div>
         <div>
             <ul class="nav-links">
                 <li><a href="#about">About</a></li>
@@ -21,6 +32,9 @@
     </nav>
     <nav id="hamburger-nav">
         <div class="logo">Varsha John</div>
+        <div class="theme-toggle" onclick="toggleTheme()">
+            <i class="fas fa-moon"></i>
+        </div>
         <div class="hamburger-menu">
             <div class="hamburger-icon" onclick="toggleMenu()">
             <span></span>
@@ -36,19 +50,30 @@
     </div>
     </nav>
     <section id="profile">
-    <div class="section__pic-container">
+    <div class="section__pic-container hero-pic" data-aos="fade-right">
         <img src="./assets/pro.jpeg" alt="Varsha John">
     </div>
     <div class="section__text">
         <p class="section__text__p1">Hi, I'm</p>
         <h1 class="title">Varsha John</h1>
-        <p class="section__text__p2">Final Year CSE Student</p>
-        <p style="margin-bottom: 1rem; font-weight: 400; color: #555;">
-            Marian Engineering College <br>
-            Full Stack Developer & AI Enthusiast
-        </p>
+       <p class="section__text__p2">
+    <span id="typed-text"></span>
+</p>
+
+<p style="margin-bottom: 1rem; font-weight: 400; color: #555;">
+Developing AI-powered and full-stack
+solutions for real-world challenges.
+</p>
         <div class="btn-container">
-            <button class="btn btn-color-2" onclick="window.open('./assets/resume-example.pdf')">Download CV</button>
+            <button class="btn btn-color-2"
+onclick="window.open('./assets/resume-example.pdf')">
+View Resume
+</button>
+
+<button class="btn btn-color-1"
+onclick="location.href='./assets/resume-example.pdf'">
+Download Resume
+</button>
             <button class="btn btn-color-1" onclick="location.href='./#contact'">Contact Info</button>
         </div>
         <div id="socials-container">
@@ -61,154 +86,338 @@
     <p class="section__text__p1">Get to Know Me</p>
     <h1 class="title">About Me</h1>
     <div class="section-container">
-        <div class="section__pic-container">
-            <img src="./assets/about.jpeg" alt="Profile Picture" class="about-pic">
-        </div>
-        <div class="about-details-container">
-            <div class="about-containers">
-                <div class="details-container">
-                    <img src="./assets/experience.png" alt="Experience Icon" class="icon"/>
-                    <h3>Experience</h3>
-                    <p>MERN Stack Intern <br/>Full Stack Development</p>
-                </div>
-                <div class="details-container">
-                    <img src="./assets/education.jpg" alt="Education Icon" class="icon"/>
-                    <h3>Education</h3>
-                    <p>B.Tech Computer Science <br/>Marian Engineering College</p>
-                </div>
-            </div>
-            <div class="text-container">
-                <p>
-                    I am a final-year Computer Science & Engineering student at Marian Engineering College. 
-                    I have a strong foundation in Python and full-stack development. I’ve worked on 
-                    diverse projects, including a <b>Blockchain-based voting system</b> using Flask and SQLite, 
-                    and a <b>Project Management Tool</b> built with the MERN stack. Currently, I am developing 
-                    an <b>AI-based Nutrition Assistant</b> that integrates YOLOv8 for food recognition and 
-                    NLP for dietary guidance. I am passionate about building intelligent systems that solve real-world problems.
-                </p>
-            </div>
-        </div>
+
+    <div class="section__pic-container" data-aos="fade-right">
+        <img src="./assets/about.jpeg" alt="Profile Picture" class="about-pic">
     </div>
+
+    <div class="about-details-container" data-aos="fade-left">
+
+        <div class="text-container about-text">
+            <p>
+I'm a Computer Science graduate passionate about building intelligent and impactful software solutions.
+<br>
+
+My work combines full-stack development, artificial intelligence, and mobile technologies to create applications that solve real-world problems.
+<br>
+
+From developing blockchain-based voting systems to training custom YOLOv8 models for AI-powered nutrition analysis, I enjoy transforming ideas into functional products.
+<br>
+
+I'm constantly learning, experimenting with emerging technologies, and looking for opportunities to build meaningful software that makes a difference.
+</p>
+        </div>
+
+        <div class="about-containers">
+
+            <div class="details-container">
+                <img src="./assets/experience.png" alt="Experience Icon" class="icon"/>
+                <h3>Experience</h3>
+                <p>Software Development Intern</p>
+            </div>
+
+            <div class="details-container">
+                <img src="./assets/education.jpg" alt="Education Icon" class="icon"/>
+                <h3>Education</h3>
+                <p>B.Tech Computer Science<br>Marian Engineering College</p>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
     <!-- The Arrow Icon you mentioned -->
-    <img src="./assets/arrow.png" alt="arrow" class="icon arrow" onclick="location.href='./#experience'">
+    <i class="fas fa-angles-down arrow"
+   onclick="location.href='./#experience'"></i>
 </section>
-   <section id="experience">
+   <section id="experience" data-aos="fade-up">
     <p class="section__text__p1">What I Know</p>
     <h1 class="title">Technical Skills</h1>
     <div class="experience-details-container">
         <div class="about-containers">
-            <!-- Full Stack Development -->
-            <div class="details-container">
-                <h2 class="experience-sub-title">Full Stack Development</h2>
-                <div class="article-container">
-                    <article>
-                        <img src="./assets/checkm.png" alt="icon" class="icon"/>
-                        <div><h3>MERN Stack</h3><p>Intermediate</p></div>
-                    </article>
-                    <article>
-                        <img src="./assets/checkm.png" alt="icon" class="icon"/>
-                        <div><h3>React Native</h3><p>Intermediate</p></div>
-                    </article>
-                    <article>
-                        <img src="./assets/checkm.png" alt="icon" class="icon"/>
-                        <div><h3>JavaScript</h3><p>Experienced</p></div>
-                    </article>
-                    <article>
-                        <img src="./assets/checkm.png" alt="icon" class="icon"/>
-                        <div><h3>HTML/CSS</h3><p>Experienced</p></div>
-                    </article>
+
+    <!-- Full Stack -->
+    <div class="details-container">
+        <h2 class="experience-sub-title">Full Stack Development</h2>
+
+        <div class="article-container">
+
+            <article class="skill-card">
+                <i class="devicon-react-original colored skill-icon"></i>
+                <div>
+                    <h3>React.js</h3>
+                    <p>Experienced</p>
                 </div>
-            </div>
-            <!-- Backend & Specialized -->
-            <div class="details-container">
-                <h2 class="experience-sub-title">AI & Core Programming</h2>
-                <div class="article-container">
-                    <article>
-                        <img src="./assets/checkm.png" alt="icon" class="icon"/>
-                        <div><h3>Python</h3><p>Advanced</p></div>
-                    </article>
-                    <article>
-                        <img src="./assets/checkm.png" alt="icon" class="icon"/>
-                        <div><h3>Flask</h3><p>Intermediate</p></div>
-                    </article>
-                    <article>
-                        <img src="./assets/checkm.png" alt="icon" class="icon"/>
-                        <div><h3>SQL/MongoDB</h3><p>Experienced</p></div>
-                    </article>
-                    <article>
-                        <img src="./assets/checkm.png" alt="icon" class="icon"/>
-                        <div><h3>C / OOPS</h3><p>Basic</p></div>
-                    </article>
+                <span class="tooltip">
+Used in:
+PlanWise
+</span>
+            </article>
+
+            <article class="skill-card">
+                <i class="devicon-nodejs-plain colored skill-icon"></i>
+                <div>
+                    <h3>Node.js</h3>
+                    <p>Experienced</p>
                 </div>
-            </div>
+                <span class="tooltip">
+Used in:
+PlanWise,
+NutriSnap Backend
+</span>
+            </article>
+
+            <article class="skill-card">
+                <i class="devicon-express-original skill-icon"></i>
+                <div>
+                    <h3>Express.js</h3>
+                    <p>Experienced</p>
+                </div>
+                <span class="tooltip">
+Used in:
+PlanWise,
+NutriSnap Backend
+</span>
+            </article>
+
+            <article class="skill-card">
+                <i class="devicon-react-original colored skill-icon"></i>
+                <div>
+                    <h3>React Native</h3>
+                    <p>Intermediate</p>
+                </div>
+                <span class="tooltip">
+Used in:
+NutriSnap Mobile App
+</span>
+            </article>
+
         </div>
     </div>
-    <img src="./assets/arrow.png" alt="arrow" class="icon arrow" onclick="location.href='./#projects'">
+
+    <!-- AI -->
+    <div class="details-container">
+        <h2 class="experience-sub-title">AI & Machine Learning</h2>
+
+        <div class="article-container">
+
+            <article class="skill-card">
+                <i class="fas fa-eye skill-icon"></i>
+                <div>
+                    <h3>YOLOv8</h3>
+                    <p>Experienced</p>
+                </div>
+                <span class="tooltip">
+Used in:
+Food Detection
+for NutriSnap
+</span>
+            </article>
+
+            <article class="skill-card">
+                <i class="devicon-python-plain colored skill-icon"></i>
+                <div>
+                    <h3>Model Training</h3>
+                    <p>Experienced</p>
+                </div>
+                <span class="tooltip">
+Custom Food Dataset
+Training & Validation
+</span>
+            </article>
+
+            <article class="skill-card">
+                <i class="devicon-opencv-plain colored skill-icon"></i>
+                <div>
+                    <h3>Computer Vision</h3>
+                    <p>Experienced</p>
+                </div>
+                <span class="tooltip">
+Object Detection
+Food Recognition
+</span>
+            </article>
+
+            <article class="skill-card">
+                <i class="fas fa-robot skill-icon"></i>
+                <div>
+                    <h3>Groq API (LLaMA)</h3>
+                    <p>Intermediate</p>
+                </div>
+                <span class="tooltip">
+AI Dietary
+Recommendations
+</span>
+            </article>
+
+        </div>
+    </div>
+
+    <!-- Core CS -->
+    <div class="details-container">
+        <h2 class="experience-sub-title">Core CS & Tools</h2>
+
+        <div class="article-container">
+
+            <article class="skill-card">
+                <i class="devicon-python-plain colored skill-icon"></i>
+
+    <div>
+        <h3>Python</h3>
+        <p>Advanced</p>
+    </div>
+
+    <span class="tooltip">
+        Used in:
+        Blockchain Voting,
+        NutriSnap
+    </span>
+</article>
+
+            <article class="skill-card">
+                <i class="devicon-mongodb-plain colored skill-icon"></i>
+                <div>
+                    <h3>MongoDB</h3>
+                    <p>Experienced</p>
+                </div>
+                <span class="tooltip">
+Used in:
+PlanWise,
+NutriSnap
+</span>
+            </article>
+
+            <article class="skill-card">
+                <i class="devicon-git-plain colored skill-icon"></i>
+                <div>
+                    <h3>Git & GitHub</h3>
+                    <p>Experienced</p>
+                </div>
+                <span class="tooltip">
+Version Control
+Project Collaboration
+</span>
+            </article>
+
+            <article class="skill-card">
+                <i class="devicon-c-plain colored skill-icon"></i>
+                <div>
+                    <h3>DSA / OOP</h3>
+                    <p>Intermediate</p>
+                </div>
+                <span class="tooltip">
+Problem Solving
+Core Programming
+</span>
+            </article>
+
+        </div>
+    </div>
+
+</div>
+    </div>
+    <i class="fas fa-angles-down arrow"
+   onclick="location.href='./#projects'"></i>
 </section>
-    <section id="projects">
+    <section id="projects" data-aos="fade-up">
     <p class="section__text__p1">Browse my recents</p>
     <h1 class="title">Projects</h1>
     <div class="experience-details-container">
-        <div class="about-containers">
+        <div class="projects-container">
             
             <!-- Project 1: Blockchain Voting -->
-            <div class="details-container color-container">
-                <div class="article-container">
-                    <img src="./assets/project1.png" alt="Blockchain Voting System" class="project-img"/>
-                </div>
-                <h2 class="experience-sub-title project-title">Blockchain Voting</h2>
-                <p style="font-size: 0.9rem; margin-bottom: 1rem;">Decentralized voting system built with <b>Python, Flask, and SQLite3</b> for secure academic elections.</p>
-                <div class="btn-container">
-                    <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/varshajohn/Blockchain_Voting.git'">
-                        Github
-                    </button>
-                    <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/varshajohn/Blockchain_Voting.git'">
-                        Live Demo
-                    </button>
-                </div>
-            </div>
+            <div class="details-container color-container" data-aos="zoom-in">
+    <div class="article-container">
+        <img src="./assets/project1.png" alt="Blockchain Voting System" class="project-img"/>
+    </div>
+
+    <h2 class="experience-sub-title project-title">
+        Blockchain Voting
+    </h2>
+
+    <p class="project-desc">
+    Secure blockchain-based e-voting platform.
+
+    <br><br>
+
+    <b>Tech:</b> Python • Flask • SQLite • Blockchain
+</p>
+
+    <div class="btn-container">
+        <button class="btn btn-color-2 project-btn"
+            onclick="location.href='https://github.com/varshajohn/Blockchain_Voting.git'">
+            Github
+        </button>
+
+        <button class="btn btn-color-2 project-btn">
+            Coming Soon
+        </button>
+    </div>
+</div>
 
             <!-- Project 2: MERN Project Tool -->
-            <div class="details-container color-container">
+            <div class="details-container color-container" data-aos="zoom-in">
                 <div class="article-container">
                     <img src="./assets/project2.png" alt="MERN Project Management" class="project-img"/>
                 </div>
-                <h2 class="experience-sub-title project-title">MERN Project Tool</h2>
-                <p style="font-size: 0.9rem; margin-bottom: 1rem;">Full-stack project management application developed during internship using the <b>MERN stack</b>.</p>
+                <h2 class="experience-sub-title project-title">
+    PlanWise
+</h2>
+                <p class="project-desc">
+    Full-stack project and task management platform for teams and organizations.
+
+    <br><br>
+
+    <b>Tech:</b> MERN • MUI • Tailwind
+</p>
                 <div class="btn-container">
                     <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/varshajohn/PLANWISE.git'">
                         Github
                     </button>
-                    <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/varshajohn/PLANWISE.git'">
-                        Live Demo
-                    </button>
+                    <button class="btn btn-color-2 project-btn">
+    Coming Soon
+</button>
                 </div>
             </div>
 
             <!-- Project 3: AI Nutrition Assistant -->
-            <div class="details-container color-container">
+            <div class="details-container color-container" data-aos="zoom-in">
                 <div class="article-container">
                     <img src="./assets/project3 (2).png" alt="AI Nutrition Assistant" class="project-img"/>
                 </div>
-                <h2 class="experience-sub-title project-title">AI Nutri-Assistant</h2>
-                <p style="font-size: 0.9rem; margin-bottom: 1rem;">(In Progress) AI mobile app using <b>React Native, YOLOv8, and GPT API</b> for dietary tracking.</p>
+                <h2 class="experience-sub-title project-title">
+    NutriSnap
+</h2>
+                <p class="project-desc">
+AI-powered nutrition assistant.
+
+<br><br>
+
+<b>Tech:</b> React Native • YOLOv8 • Groq API • MongoDB
+</p>
                 <div class="btn-container">
                     <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/varshajohn/NUTRISNAP_1.git'">
                         Github
                     </button>
-                    <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/varshajohn/NUTRISNAP_1.git'">
-                        Live Demo
-                    </button>
+                    <button class="btn btn-color-2 project-btn">
+    In Progress
+</button>
                 </div>
             </div>
 
         </div>
     </div>
-    <img src="./assets/arrow.png" alt="arrow" class="icon arrow" onclick="location.href='./#contact'">
+    <i class="fas fa-angles-down arrow"
+   onclick="location.href='./#contact'"></i>
 </section>
-    <section id="contact">
+
+    <section id="contact" data-aos="fade-up">
         <p class="section__text__p1">Get In Touch</p>
-        <h1 class="title">Contact Me</h1>
+        <h1 class="title">Let's Connect</h1>
+        <p class="contact-subtext">
+        Open to internships, software engineering roles, and exciting collaborations.
+    </p>
         <div class="contact-info-upper-container">
             <div class="contact-info-container">
                 <img src="./assets/email.jpg" alt="Email Icon" class="icon contact-icon email-icon"/>
@@ -234,6 +443,17 @@
         </nav>
         <p>Copyright &#169;2026 Varsha John. All rights reserved.</p>
     </footer>
-    <script src="script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/tsparticles@2/tsparticles.bundle.min.js"></script>
+<script src="script.js"></script>
+
+<script>
+AOS.init({
+    duration: 800,
+    once: false
+});
+</script>
 </body>
 </html>
