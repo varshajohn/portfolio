@@ -194,6 +194,15 @@ section{
     margin-top: 1.5rem;
     gap: 1.5rem;
 }
+.social-icon{
+    font-size:2rem;
+    color:inherit;
+    transition:0.3s;
+}
+
+.social-icon:hover{
+    transform:translateY(-3px);
+}
 .icon {
     cursor: pointer;
     height: 2.5rem; /* Slightly larger */
@@ -461,9 +470,13 @@ article .icon{
     font-size: 1rem;
     line-height: 1.6;
 }
-.contact-icon{
-    cursor:default;
-    height:5rem;
+.contact-fa-icon{
+    font-size:2rem;
+    color:inherit;
+    flex-shrink:0;
+}
+body.dark-mode .contact-fa-icon{
+    color:white;
 }
 .email-icon{
     height:3.8rem;
