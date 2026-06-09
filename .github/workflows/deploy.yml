@@ -23,6 +23,12 @@ jobs:
       - name: Upload Website to S3
         run: |
           aws s3 sync . s3://varshajohn-portfolio-2026 \
-          --delete \
-          --exclude ".git/*" \
-          --exclude ".github/*"
+            --delete \
+            --exclude ".git/*" \
+            --exclude ".github/*"
+
+      - name: Invalidate CloudFront Cache
+        run: |
+          aws cloudfront create-invalidation \
+            --distribution-id E2VOSZAG11T0QB \
+            --paths "/*"
